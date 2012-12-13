@@ -1,0 +1,29 @@
+
+Lab 12 instructions - JINTEREST
+
+flickr display photos based on search
+
+can select photo 
+brings up text box, type in commment, and submit to CDN
+saves photo src link to CDN and pulls photo to page
+
+
+~~~
+
+
+PROCESS
+
+repeat flickr display/API lab
+
+click on photo (this), get text box 
+
+parse initialize
+saves  1) img 2) text comment 
+
+runs "get_data" from Parse 
+
+
+
+
+EXTRA CREDIT: 
+dblclick delete 
