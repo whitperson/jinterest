@@ -1,20 +1,30 @@
-@import url(http://fonts.googleapis.com/css?family=Syncopate);
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
 
 body
 {
   background-color: #252525;
-  padding: 15px;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 #header
 {
-  font-family: 'Syncopate', sans-serif;
-  font-size: 50px;
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 48px;
   color: #cccccc;
 }
 
+p
+{
+  font-size: 20px;
+  color: #cccccc;
+
+}
+
 .button {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 20px;
   padding: 10px;
@@ -43,7 +53,7 @@ input[type='text']
   width: 300px;
   height: 30px;
   font-size: 20px;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
   padding: 4px;
   border-radius: 15px;
 }
@@ -52,41 +62,84 @@ input[type='text']
 {
   margin-bottom: 15px;
 }
-
-#results
-{
-  float: left;
-  width: 50%;
-}
-
-#saved
-{
-  float: right;
-  width: 50%;
-}
-
 .result, .jin
 {
+  width: 200px;
   float: left;
-  margin: 3px;
-  border: 1px dashed #252525;
-  background-color: #252525;
-  height: 100px;
-}
-
-img
-{
-/*  width: 150px;
-  height: 150px;*/
 }
 
 .result input[type='text']
 {
-  width: 200px;
+  width: 100px;
 }
 
 .control
 {
-  padding: 5px;
+  padding: 2px;
   float: right;
+}
+
+#saved
+{
+  width: 45%;
+  float: right;
+}
+
+#results
+{
+  float: left;
+  width: 45%;
+}
+
+#results, #saved
+{
+   /* Prevent vertical gaps */
+   line-height: 0;
+   -webkit-column-count: 3;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    3;
+   -moz-column-gap:      0px;
+   column-count:         3;
+   column-gap:           0px;
+}
+
+#results img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+#saved img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #results, #saved {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #results, #saved  {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #results, #saved  {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #results, #saved  {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
 }

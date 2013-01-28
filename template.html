@@ -12,18 +12,22 @@
 
   <body>
     <div id="app">
-
       <div id="header">Jinterest</div>
+      <p>
+        Jinterest is an app built to mimic the search and pin functionalities of popular pinboard site, <a href="http://pinterest.com/" target="_blank">Pinterest</a>. It's built in Javascript (hence the name Jinterest) and utilizes the Flickr API for image search and Parse for data storage.
+      </p>
+
       <div id="controls">
         <input id="query" type="text" placeholder="search flickr" />
         <input id="search" class="button" type="button" value="Show Me Photos!" />
-      </div>
+        <input id="refresh" class="button" type="button" value="Clear All Jins" />
+      </div> <!--ends controls-->
+    </div> <!--ends app-->
 
-      <div>
+      <div id="photos">
         <div id="results"></div>
         <div id="saved"></div>
-      </div>
+      </div> <!--ends photos-->
 
-    </div>
   </body>
 </html>

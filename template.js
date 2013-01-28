@@ -8,6 +8,7 @@ $(function(){
   Parse.initialize("IIyc4mqNUjzVSIa2s0xqCm6DmvwHCzi4eYDkIfSW", "YmLLHAVqNLKJHGucuKWZF4AYsniWnfsC7nnRyPDe");
   JinObject = Parse.Object.extend("JinObject");
   getJins();
+  $('#refresh').click(clear_all);
 });
 
 
@@ -95,4 +96,10 @@ function showJin(jin)
   img.attr('title', jin.get('txt'));
   div.append(img);
   $('#saved').prepend(div);
+}
+
+function clear_all()
+{
+  $('#saved').empty();
+  $('#results').empty();
 }
